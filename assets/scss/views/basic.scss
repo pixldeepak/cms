@@ -1,0 +1,139 @@
+.basic_pg {
+    .tbl_sec {
+        display: table;
+        width: 100%;
+        padding: 0.75rem 0;
+
+        .tbl_cell_1 {
+            display: table-cell;
+            width: 20%;
+            vertical-align: top;
+        }
+
+        .tbl_cell_2 {
+            display: table-cell;
+            width: 100%;
+            background-color: #ffffff;
+            border: #dedede 1px solid;
+        }
+    }
+    .box {
+        padding: 20px;
+    }
+    .sidebar_nav_sec {
+        display: block;
+        background-color: #edeff2;
+        margin: 0;
+        li {
+
+            border-top: 1px solid #d9dfe7;
+            border-left: 1px solid #d9dfe7;
+            color: #bfb8b6;
+            a {
+                display: block;
+                text-decoration: none;
+                cursor: pointer;
+                padding-top: 10px;
+                padding-left: 20px;
+                padding-bottom: 10px;
+
+                &.active {
+                    background-color: #ffffff;
+                    border-right: none;
+                    position: relative;
+                    border-left: 2px solid;
+                    margin: 0 -2px 0 0;
+                }
+                .fa {
+                    padding-right: 5px;
+                }
+                .fa-dashboard {
+                    color: #c4629c;
+                }
+                .fa-history {
+                    color: #f29e3f;
+                }
+                .fa-graduation-cap {
+                    color: #747474;
+                }
+                .fa-certificate {
+                    color: #b85159;
+                }
+                .fa-folder-open {
+                    color: #929292;
+                }
+                .fa-share-alt {
+                    color: red;
+                }
+                .fa-medkit {
+                    color: orangered;
+                }
+                .fa-user {
+                    color: #4daef3;
+                }
+                .fa-users {
+                    color: blueviolet;
+                }
+                .fa-lock {
+                    color: deeppink;
+                }
+            }
+        }
+    }
+
+    .title {
+        padding-top: 50px;
+        padding-left: 25px;
+    }
+    .user_details_wrap {
+        .tr {
+            line-height: 30px;
+        }
+        .td {
+            color: #80869c;
+            text-align: right;
+            padding-right: 10px;
+        }
+        .form-group {
+
+        }
+    }
+    .profile_pic_wrap {
+        text-align: center;
+        padding: 0 0 30px;
+
+        img {
+            width: 150px;
+            height: 150px;
+        }
+    }
+    .name {
+        font-size: 16px;
+        font-weight: 500;
+        text-align: center;
+    }
+    .designation {
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+    }
+    .cta_wrap {
+        a.icon {
+            margin: 0 8px 0 0;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+
+
+    .sec_title {
+        font-size: 24px;
+        font-weight: bold;
+        padding: 10px 0 10px 0;
+        border-bottom: 1px solid #ddd;
+        margin: 23px 0;
+    }
+}
+

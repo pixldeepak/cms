@@ -1,0 +1,71 @@
+//Flash Msg
+.tr_flash_msg_wrap {
+    position: fixed;
+    z-index: 1000;
+    background: white;
+    color: #333333;
+    top: $header_height;
+    min-width: 230px;
+    padding: 15px 20px;
+    margin: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    @include border-radius(3px);
+
+    .notification_heading {
+        font-weight: 600;
+    }
+
+    &.full-width {
+        left: 0;
+        margin: 0;
+        box-shadow: none;
+        border: 0;
+    }
+
+    &.top {
+        top: $header_height;
+    }
+    &.right {
+        right: 0;
+    }
+    &.left {
+        left: 0;
+    }
+    &.bottom {
+        top: auto;
+        bottom: 0;
+    }
+
+    .close_icon_sec {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+        border: 1px solid #fff;
+        padding: 6px;
+        border-radius: 100%;
+        font-size: 8px;
+        background: rgba(255, 255, 255, 0.9);
+        color: #505050;
+        line-height: 0;
+    }
+
+    //Themes
+    &.warning {
+        background: #e67e22;
+        color: white;
+    }
+    &.error {
+        background: #e74c3c;
+        color: white;
+    }
+    &.success {
+        background: #2ecc71;
+        color: white;
+    }
+    &.info {
+        background: #3498db;
+        color: white;
+    }
+}

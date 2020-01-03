@@ -1,0 +1,189 @@
+body {
+    &.popup-visible {
+        overflow: hidden;
+    }
+}
+
+.cd-popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+    -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+    transition: opacity 0.3s 0s, visibility 0s 0.3s;
+    z-index: 1000;
+    overflow: scroll;
+
+    &.is-visible {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+        -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+        transition: opacity 0.3s 0s, visibility 0s 0s;
+        background-color: rgba(0, 0, 0, 0.55);
+
+        .cd-popup-container {
+            -webkit-transform: translateY(0);
+            -moz-transform: translateY(0);
+            -ms-transform: translateY(0);
+            -o-transform: translateY(0);
+            transform: translateY(0);
+        }
+    }
+
+    .cd-popup-container {
+        position: relative;
+        background: #FFF;
+        border-radius: 6px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.42);
+        -webkit-transform: translateY(-40px);
+        -moz-transform: translateY(-40px);
+        -ms-transform: translateY(-40px);
+        -o-transform: translateY(-40px);
+        transform: translateY(-40px);
+        -webkit-backface-visibility: hidden;
+        -webkit-transition-property: -webkit-transform;
+        -moz-transition-property: -moz-transform;
+        transition-property: transform;
+        -webkit-transition-duration: 0.3s;
+        -moz-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+
+        .card-title {
+            font-weight: 600;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+    }
+
+    .cd-popup-close {
+        position: absolute;
+        top: 21px;
+        right: 12px;
+        width: 30px;
+        height: 30px;
+        font-size: 21px;
+        color: #333333;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &.default {
+        .cd-popup-close {
+            font-size: 30px;
+            color: black;
+            text-decoration: none;
+        }
+    }
+
+    &.book_form {
+        .cd-popup-close {
+            top: 26px;
+            font-size: 22px;
+            color: #f9f9f9;
+            text-decoration: none;
+        }
+    }
+
+    &.full_screen_popup {
+        .cd-popup-container {
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+            border-radius: 0;
+        }
+    }
+
+    .modal-header {
+        min-height: 60px;
+        padding: 15px 20px 15px 30px;
+        background: #f9f9f9
+    }
+
+    .modal-header .close {
+        float: right;
+        line-height: 1;
+        text-shadow: 0 1px 0 #fff;
+        color: #37a000;
+        text-align: center
+    }
+
+    .modal-title {
+        margin: 0;
+        line-height: 1.42857;
+        font-size: 22px
+    }
+
+    .modal-body {
+        position: relative;
+        padding: 30px 30px 0;
+        font-size: 13px
+    }
+    .modal-footer {
+        margin-top: 0;
+        padding: 0 20px 30px 30px;
+        text-align: left;
+    }
+
+    .modal-footer:after, .modal-footer:before {
+        content: " ";
+        display: table
+    }
+
+    .modal-footer:after {
+        clear: both
+    }
+
+    .modal-footer .btn, .modal-footer .btn + .btn, .modal-footer .checkbox, .modal-footer .radio {
+        margin: 30px 0 0
+    }
+
+}
+
+//lg
+@media (min-width: 990px) and (max-width: 1440px) {
+    .cd-popup {
+        .cd-popup-container {
+            width: 750px;
+            margin: 30px auto;
+        }
+    }
+}
+
+//MD
+@media (min-width: 768px) and (max-width: 991px) {
+    .cd-popup {
+        .cd-popup-container {
+            width: 600px;
+            margin: 30px auto;
+        }
+    }
+}
+
+//SM
+@media (min-width: 480px) and (max-width: 767px) {
+    .cd-popup {
+        .cd-popup-container {
+            width: 480px;
+            margin: 20px auto;
+        }
+    }
+}
+
+//xs
+@media (min-width: 320px) and (max-width: 479px) {
+    .cd-popup {
+        .cd-popup-container {
+            width: 320px;
+            margin: 15px auto;
+        }
+    }
+}

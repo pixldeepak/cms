@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+    {{>header_assets}}
+</head>
+<body class="">
+<div class="page">
+    <div class="page-single">
+        <div class="container">
+            <div class="row">
+                <div class="col col-login mx-auto">
+                    <form class="card" id="jsRegisterForm">
+                        <div class="card-body p-6">
+                            <div class="card-title">Create new account</div>
+                            <div class="form-group">
+                                <label class="form-label">Name</label>
+                                <input type="text" class="form-control required js_name" placeholder="Enter name">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email address</label>
+                                <input type="email" class="form-control required isValidEmail js_email"
+                                       placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Password</label>
+                                <input type="password" class="form-control required js_password" placeholder="Password">
+                            </div>
+                            <div class="form-footer">
+                                <button type="submit" class="btn btn-primary btn-block">Create new account</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div cass="text-center text-muted">
+                        Already have account? <a href="/login">Sign in</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{>footer_assets}}
+<script type="text/javascript">
+    $(function () {
+        LoginPage.initRegister();
+    });
+</script>
+</body>
+
+</html>

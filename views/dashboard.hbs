@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+    {{>header_assets cropper=true}}
+</head>
+<body class="basic_pg">
+<section class="page">
+    <div class="page-main">
+        {{#if is_admin}}
+            {{>header user=user}}
+        {{else}}
+            {{>header user=data nav='dashboard'}}
+        {{/if}}
+
+        <!--Main content start here-->
+        <section class="main_cont_sec">
+            <div class="container-fluid">
+                <div class="tbl_sec">
+                    <div class="tbl_cell_1">
+                        {{#if is_admin}}
+                            {{>admin_sidebar_links menu_link="profile" user_id=user_id}}
+                        {{else}}
+                            {{>sidebar_links menu_link="profile"}}
+                        {{/if}}
+                    </div>
+                    <div class="tbl_cell_2">
+                        <div class="box">
+                            <form class="form_sec js_profile_form">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card card-profile">
+                                            <div class="card-header js_usr_cover_pic_up"
+                                                 data-target="#imageCropperModal" data-toggle="modal"
+                                                 style="background-image: url('{{#if
+                                                         data.background_pic}}{{data.background_pic}}{{else}}http://via.placeholder.com/150x150{{/if}}');"></div>
+                                            <div class="card-body text-center">
+                                                <img class="card-profile-img js_usr_profile_pic_up"
+                                                     data-target="#imageCropperModal" data-toggle="modal" src="{{#if
+                                                        data.profile_pic}}{{data.profile_pic}}{{else}}http://via.placeholder.com/150x150{{/if}}">
+                                                <h3 class="mb-3">Deepak Patil</h3>
+                                                <p class="mb-4">
+                                                    E12 | Full stack developer
+                                                </p>
+                                                <button class="btn btn-outline-primary btn-sm">
+                                                    <span class="fa fa-twitter"></span> Follow
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-sm-3">
+                                                            <label class="form-label">Employee ID</label>
+                                                        </div>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control js_code" disabled=""
+                                                                   placeholder="Code" value="E12">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-sm-3">
+                                                            <label class="form-label">First Name</label>
+                                                        </div>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control js_fname"
+                                                                   placeholder="Company"
+                                                                   value="Deepak">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-sm-3">
+                                                            <label class="form-label">Last Name</label>
+                                                        </div>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control js_lname"
+                                                                   placeholder="Last Name"
+                                                                   value="Patil">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-sm-3">
+                                                            <label class="form-label">Email address</label>
+                                                        </div>
+                                                        <div class="col-sm-9">
+                                                            <input type="email" class="form-control js_email"
+                                                                   placeholder="Email address"
+                                                                   value="deepaksaipatil111@gmail.com">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-sm-3">
+                                                            <label class="form-label">Designation</label>
+                                                        </div>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control js_designation"
+                                                                   placeholder=""
+                                                                   value="Full Stack Developer">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Main content ends here-->
+    </div>
+
+    <div class="modal fade imageUploadPopup" id="imageCropperModal" role="dialog" aria-labelledby="modalLabel"
+         tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Upload image</h5>
+                    <button type="button" class="close js_img_popup_close" data-dismiss="modal"
+                            aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>
+                            Select file :
+                        </label>
+                        <input type="file" class="js_file_input" data-preview="#userPicPreviewImage">
+                        <input type="hidden" class="js_profile_img_data_uri_dum">
+                        <input type="hidden" class="js_profile_img_data_uri">
+                    </div>
+                    <div class="img-container">
+                        <img id="userPicPreviewImage" src="{{data.profile_pic}}" alt="Picture">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-success js_submit_img">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{>footer}}
+</section>
+{{>footer_assets cropper=true}}
+<script>
+    $(function() {
+        ProfileHandler.init();
+    });
+</script>
+</body>
+</html>

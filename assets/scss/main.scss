@@ -1,0 +1,21 @@
+@import "util/variables";
+@import "vendor/normalize";
+@import "vendor/boostrap";
+@import "fonts/tr_icons";
+
+//Utils
+@import "util/mixins";
+@import "util/boostrap_reset";
+@import "util/common";
+@import "util/pop_up";
+@import "util/flash_msg";
+
+
+//Page styles
+@import "views/login";
+@import "views/basic";
+@import "views/dashboard";
+
+
+
+

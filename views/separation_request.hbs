@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+
+    {{>header_assets}}
+
+</head>
+<body class="basic_pg separation_request_pg">
+<section class="page">
+    {{>header}}
+
+
+    <!--Main content start here-->
+    <section class="main_cont_sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="alert alert-success">
+                        <strong>Success!</strong> Your account details have been updated successfully.
+                    </div>
+                </div>
+            </div>
+            <div class="tbl_sec">
+                <div class="tbl_cell_1">
+                    {{#if is_admin}}
+                        {{>admin_sidebar_links menu_link="separation_request" user_id=user_id}}
+                    {{else}}
+                        {{>sidebar_links menu_link="separation_request"}}
+                    {{/if}}
+                </div>
+                <div class="tbl_cell_2">
+                    <div class="box">
+                        <div class="tab-content">
+                            <div id="separationrequest" class="tab-pane fade in active show">
+                                <form class="row" id="jsSeparationrequestForm">
+                                    <div class="col-lg-10">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <p class="title">Separation Request</p>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="form-input-wrap row">
+                                                    <div class="col-lg-4">
+                                                        <label class="form-label">Experience<span class="form-required">*</span></label>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                    <textarea class="form-control" id="experience"
+                                                              placeholder="Enter your experience with the organization"
+                                                              name="experience"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-input-wrap row">
+                                                    <div class="col-lg-4">
+                                                        <label class="form-label">Feedback<span
+                                                                class="form-required">*</span></label>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                    <textarea class="form-control"
+                                                              id="feedback"
+                                                              placeholder="Enter Feedback for the organization"
+                                                              name="feedback"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-input-wrap row">
+                                                    <div class="col-lg-4">
+                                                        <label class="form-label">Confidential Feedback</label>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                    <textarea class="form-control"
+                                                              id="feedback"
+                                                              placeholder="Enter Confidential Feedback for the organization"
+                                                              name="feedback"></textarea>
+                                                        <span class="confidential">This message will not be visible to the managers. This will be visible only to HR/ Management</span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-input-wrap row">
+                                                    <div class="col-lg-4">
+                                                        <label class="form-label">Expected Relieving Date</label>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <div class="row gutters-xs">
+                                                            <div class="col-lg-7">
+                                                                <div class="table_sec">
+                                                                    <div class="input-group">
+                                                                        <div class="input-group-prepend">
+                                                                        </div>
+                                                                        <input type="text"
+                                                                               class="form-control text-left required js_from"
+                                                                               aria-label="Today date"
+                                                                               placeholder="Mar 20,2018">
+                                                                        <div class="input-group-append">
+                                                                            <div class="input-group-text">
+                                                                                <i class="fa fa-calendar"
+                                                                                   data-toggle="tooltip"
+                                                                                   title="fa fa-calendar"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-input-wrap row">
+                                                    <div class="col-lg-4">
+                                                        <input type="hidden" class="js_user" value="{{data._id}}">
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <button class="btn btn-primary">
+                                                            <span class="fa fa-check"></span>
+                                                            Submit
+                                                        </button>
+                                                        <button class="btn btn-link">
+                                                            <span class="fa fa-refresh"></span>
+                                                            Reset
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Main content ends here-->
+    {{>footer}}
+</section>
+
+{{>footer_assets}}
+</body>
+</html>

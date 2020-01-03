@@ -1,0 +1,53 @@
+{
+  "name": "CMS-WEB",
+  "version": "1.0.0",
+  "description": "Static pages for CMS",
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "author": "deepaksaipatil111@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "async-waterfall": "^0.1.5",
+    "aws-sdk": "^2.94.0",
+    "aws-sns-sms": "^1.0.2",
+    "base-64": "^0.1.0",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "crypto": "^1.0.1",
+    "csurf": "^1.9.0",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "formidable": "^1.2.1",
+    "fs": "0.0.1-security",
+    "helmet": "^3.12.1",
+    "http": "0.0.0",
+    "jquery": "^3.0.0",
+    "jwt-simple": "^0.5.1",
+    "moment": "^2.22.2",
+    "morgan": "^1.9.0",
+    "path": "^0.12.7",
+    "querystring": "^0.2.0",
+    "request": "^2.87.0",
+    "serve-favicon": "^2.5.0",
+    "socket.io": "^2.1.0",
+    "underscore": "^1.8.3",
+    "utf8": "latest",
+    "uuid": "^3.3.2",
+    "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-browserify": "^5.3.0",
+    "grunt-contrib-cssmin": "^2.0.0",
+    "grunt-contrib-handlebars": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-cssnano": "^2.1.0",
+    "grunt-hashres": "^0.4.1",
+    "grunt-webfont": "^1.7.1",
+    "handlebars": "^4.0.6"
+  }
+}
