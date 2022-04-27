@@ -38,7 +38,7 @@
     "winston": "^2.3.1"
   },
   "devDependencies": {
-    "grunt": "^1.0.3",
+    "grunt": "^1.5.2",
     "grunt-browserify": "^5.3.0",
     "grunt-contrib-cssmin": "^2.0.0",
     "grunt-contrib-handlebars": "^1.0.0",
